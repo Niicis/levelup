@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+
+        <!--<item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>-->
+    </style>
+</resources>

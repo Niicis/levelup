@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">levelup</string>
+    <string name="login">Login</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_password">Password</string>
+    <string name="remember_me">Remenber Me</string>
+    <string name="forget_password">Forgotten Password ?</string>
+    <string name="login_button">LogIn</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="Home">Home</string>
+    <string name="Log_out">Log Out</string>
+    <string name="id_ranking">My rank</string>
+    <string name="My_account">My Account</string>
+    <string name="id_exercises">My Excersises</string>
+    <string name="account_validate">Validate account</string>
+    <string name="account_postal_code">Postal code</string>
+    <string name="account_country">Country</string>
+    <string name="account_city">city</string>
+    <string name="account_address">adfdress</string>
+    <string name="account_email">email</string>
+    <string name="account_birth_day">Birth Date</string>
+    <string name="account_last_name">Last Name</string>
+    <string name="account_first_name">First Name</string>
+    <string name="account">Account</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/id_icon_home"
+        android:title="@string/Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/id_icon_user"
+        android:title="@string/My_account"
+        android:icon="@drawable/ic_signup"/>
+
+    <item
+        android:id="@+id/id_ranking"
+        android:title="@string/id_ranking"
+        android:icon="@drawable/ic_orders"/>
+
+    <item
+        android:id="@+id/id_exercises"
+        android:title="@string/id_exercises"
+        android:icon="@drawable/ic_orders"/>
+
+    <item
+        android:id="@+id/id_icon_logOut"
+        android:title="@string/Log_out"
+        android:icon="@drawable/ic_leave"/>
+
+</menu>
