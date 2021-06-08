@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_list"
+        android:icon="@drawable/ic_baseline_list"
+        android:title="@string/bottom_nav_item_exercise"/>
+    <item
+        android:id="@+id/ic_map"
+        android:icon="@drawable/ic_baseline_map"
+        android:title="@string/bottom_nav_item_commment" />
+
+</menu>

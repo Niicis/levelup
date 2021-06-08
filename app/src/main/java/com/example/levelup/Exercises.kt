@@ -5,19 +5,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
-import kotlinx.android.synthetic.main.activity_account.*
+import kotlinx.android.synthetic.main.activity_my_exercises.*
 import kotlinx.android.synthetic.main.main_toolbar.*
+import java.lang.Exception
 
-class Account : AppCompatActivity(), View.OnClickListener {
+class Exercises : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_account)
+        setContentView(R.layout.activity_my_exercises)
         initMenu()
     }
 
     private fun initMenu() {
         toggle_button?.setOnClickListener(this)
-        navigationView_account?.setNavigationItemSelectedListener {
+        navigationView_exercises?.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.id_icon_home -> goToActivity(MainActivity::class.java)
                 R.id.id_icon_user -> goToActivity(Account::class.java)
@@ -32,19 +33,27 @@ class Account : AppCompatActivity(), View.OnClickListener {
             }
             true
         }
+
+        bottom_navigation.setOnNavigationItemSelectedListener{
+            when(it.itemId){
+                //R.id.ic_list -> goToActivity(Exercises::class.java)
+                R.id.ic_map -> goToActivity(Comments::class.java)
+            }
+            true
+        }
     }
 
     override fun onClick(view: View?) {
         when (view) {
-            toggle_button -> drawerLayout_account.openDrawer(Gravity.LEFT)
+            toggle_button -> drawerLayout_exercises.openDrawer(Gravity.LEFT)
         }
     }
 
     private fun goToActivity(destination: Class<*>) {
         startActivity(Intent(this, destination))
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-        if (drawerLayout_account?.isDrawerOpen(Gravity.LEFT)!!) {
-            drawerLayout_account.closeDrawer(Gravity.LEFT)
+        if (drawerLayout_exercises?.isDrawerOpen(Gravity.LEFT)!!) {
+            drawerLayout_exercises.closeDrawer(Gravity.LEFT)
         }
     }
 }

@@ -22,4 +22,10 @@
     <string name="account_last_name">Last Name</string>
     <string name="account_first_name">First Name</string>
     <string name="account">Account</string>
+    <string name="id_all_exercises">All Excercises</string>
+    <string name="exercisesResume">resume</string>
+    <string name="exercisesAnswer">Answer</string>
+    <string name="comments">Comments</string>
+    <string name="bottom_nav_item_commment">Comments</string>
+    <string name="bottom_nav_item_exercise">Excercise</string>
 </resources>

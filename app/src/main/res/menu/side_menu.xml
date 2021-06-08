@@ -21,6 +21,12 @@
         android:icon="@drawable/ic_orders"/>
 
     <item
+        android:id="@+id/id_all_exercises"
+        android:title="@string/id_all_exercises"
+        android:icon="@drawable/ic_orders"/>
+
+
+    <item
         android:id="@+id/id_icon_logOut"
         android:title="@string/Log_out"
         android:icon="@drawable/ic_leave"/>

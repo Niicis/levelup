@@ -13,7 +13,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        initListener()
         initMenu()
+    }
+
+    private fun initListener() {
+        login_login_button.setOnClickListener(this)
     }
 
     private fun initMenu() {
@@ -23,8 +28,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 R.id.id_icon_home -> goToActivity(MainActivity::class.java)
                 R.id.id_icon_user -> goToActivity(Account::class.java)
 
-                R.id.id_ranking -> goToActivity(MyRank::class.java)
-                R.id.id_exercises -> goToActivity(MyExercises::class.java)
+                R.id.id_ranking -> goToActivity(Rank::class.java)
+                R.id.id_exercises -> goToActivity(Exercises::class.java)
+                R.id.id_all_exercises -> goToActivity(AllExercises::class.java)
                 R.id.id_icon_logOut -> {
                     goToActivity(MainActivity::class.java)
                 }
@@ -37,7 +43,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         when (view) {
             toggle_button -> drawerLayout_main.openDrawer(Gravity.LEFT)
+            login_login_button -> checkAccount()
         }
+    }
+
+    private fun checkAccount() {
+        //appel a l'api pour connection
+        goToActivity(Rank::class.java)
     }
 
     private fun goToActivity(destination: Class<*>) {

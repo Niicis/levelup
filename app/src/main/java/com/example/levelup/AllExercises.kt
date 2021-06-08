@@ -5,26 +5,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_my_rank.*
+import kotlinx.android.synthetic.main.activity_my_exercises.*
 import kotlinx.android.synthetic.main.main_toolbar.*
 
-class MyRank : AppCompatActivity(), View.OnClickListener {
+class AllExercises : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_rank)
+        setContentView(R.layout.activity_all_exercises)
         initMenu()
     }
 
     private fun initMenu() {
         toggle_button?.setOnClickListener(this)
-        navigationView_rank?.setNavigationItemSelectedListener {
+        navigationView_exercises?.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.id_icon_home -> goToActivity(MainActivity::class.java)
                 R.id.id_icon_user -> goToActivity(Account::class.java)
 
-                R.id.id_ranking -> goToActivity(MyRank::class.java)
-                R.id.id_exercises -> goToActivity(MyExercises::class.java)
+                R.id.id_ranking -> goToActivity(Rank::class.java)
+                R.id.id_exercises -> goToActivity(Exercises::class.java)
+                R.id.id_all_exercises -> goToActivity(AllExercises::class.java)
                 R.id.id_icon_logOut -> {
                     goToActivity(MainActivity::class.java)
                 }
@@ -36,15 +36,16 @@ class MyRank : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         when (view) {
-            toggle_button -> drawerLayout_rank.openDrawer(Gravity.LEFT)
+            toggle_button -> drawerLayout_exercises.openDrawer(Gravity.LEFT)
         }
     }
 
     private fun goToActivity(destination: Class<*>) {
         startActivity(Intent(this, destination))
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-        if (drawerLayout_rank?.isDrawerOpen(Gravity.LEFT)!!) {
-            drawerLayout_rank.closeDrawer(Gravity.LEFT)
+        if (drawerLayout_exercises?.isDrawerOpen(Gravity.LEFT)!!) {
+            drawerLayout_exercises.closeDrawer(Gravity.LEFT)
+
         }
     }
 }
