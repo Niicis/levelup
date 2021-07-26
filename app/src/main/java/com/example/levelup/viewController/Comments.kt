@@ -1,10 +1,10 @@
-package com.example.levelup
+package com.example.levelup.viewController
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
+import com.example.levelup.R
 import kotlinx.android.synthetic.main.activity_my_exercises.*
 
 class Comments : AppCompatActivity(), View.OnClickListener {

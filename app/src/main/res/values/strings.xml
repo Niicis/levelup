@@ -27,5 +27,5 @@
     <string name="exercisesAnswer">Answer</string>
     <string name="comments">Comments</string>
     <string name="bottom_nav_item_commment">Comments</string>
-    <string name="bottom_nav_item_exercise">Excercise</string>
+    <string name="bottom_nav_item_exercise">Exercise</string>
 </resources>

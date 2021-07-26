@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.levelup">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Comments"></activity>
-        <activity android:name=".AllExercises" />
-        <activity android:name=".Account" />
-        <activity android:name=".Exercises" />
-        <activity android:name=".Rank" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".viewController.Home" />
+        <activity android:name=".viewController.Comments" />
+        <activity android:name=".viewController.AllExercises" />
+        <activity android:name=".viewController.Account" />
+        <activity android:name=".viewController.Exercises" />
+        <activity android:name=".viewController.Rank" />
+        <activity android:name=".viewController.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

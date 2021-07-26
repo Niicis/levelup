@@ -1,32 +1,27 @@
-package com.example.levelup
+package com.example.levelup.viewController
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.levelup.*
+import kotlinx.android.synthetic.main.activity_account.*
 import kotlinx.android.synthetic.main.main_toolbar.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class Account : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        initListener()
+        setContentView(R.layout.activity_account)
         initMenu()
-    }
-
-    private fun initListener() {
-        login_login_button.setOnClickListener(this)
     }
 
     private fun initMenu() {
         toggle_button?.setOnClickListener(this)
-        navigationView_main?.setNavigationItemSelectedListener {
+        navigationView_account?.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.id_icon_home -> goToActivity(MainActivity::class.java)
-                R.id.id_icon_user -> goToActivity(Account::class.java)
+                R.id.id_icon_home -> goToActivity(Home::class.java)
+                //R.id.id_icon_user -> goToActivity(Account::class.java)
 
                 R.id.id_ranking -> goToActivity(Rank::class.java)
                 R.id.id_exercises -> goToActivity(Exercises::class.java)
@@ -42,21 +37,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View?) {
         when (view) {
-            toggle_button -> drawerLayout_main.openDrawer(Gravity.LEFT)
-            login_login_button -> checkAccount()
+            toggle_button -> drawerLayout_account.openDrawer(Gravity.LEFT)
         }
-    }
-
-    private fun checkAccount() {
-        //appel a l'api pour connection
-        goToActivity(Rank::class.java)
     }
 
     private fun goToActivity(destination: Class<*>) {
         startActivity(Intent(this, destination))
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
-        if (drawerLayout_main?.isDrawerOpen(Gravity.LEFT)!!) {
-            drawerLayout_main.closeDrawer(Gravity.LEFT)
+        if (drawerLayout_account?.isDrawerOpen(Gravity.LEFT)!!) {
+            drawerLayout_account.closeDrawer(Gravity.LEFT)
         }
     }
 }
