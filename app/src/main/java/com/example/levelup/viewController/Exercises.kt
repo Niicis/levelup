@@ -17,20 +17,11 @@ import javax.net.ssl.HttpsURLConnection
 
 class Exercises : AppCompatActivity(), View.OnClickListener {
 
-    private val urlEndPoint: URL = URL("http://localhost:8080/api/exercises/all")
-    private val myConnection: HttpsURLConnection = urlEndPoint.openConnection() as HttpsURLConnection
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_exercises)
         initMenu()
 
-        if(myConnection.responseCode == 200){
-            val responseBody = InputStreamReader(myConnection.inputStream,"UTF-8")
-            val mapper = jacksonObjectMapper()
-            val allEx = mapper.readValue<List<Exercise>>(urlEndPoint)
-        }
     }
 
     private fun initMenu() {

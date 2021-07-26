@@ -14,8 +14,6 @@ import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private val urlEndPoint: URL = URL("http://localhost:8080/api/auth/login")
-    private val myConnection = urlEndPoint.openConnection() as HttpsURLConnection
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,15 +34,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun checkAccount() {
-
-        /*myConnection.setRequestProperty("email",editText_login.text.toString())
-        myConnection.setRequestProperty("password",editText_password.text.toString())
-
-        if(myConnection.responseCode == 200){
-            val responseBody = InputStreamReader(myConnection.inputStream,"UTF-8")
-            val mapper = jacksonObjectMapper()
-            val allEx = mapper.readValue<List<Exercise>>(urlEndPoint)
-        }*/
 
 
         goToActivity(Home::class.java)
