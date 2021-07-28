@@ -9,7 +9,7 @@ object AppPreferences {
     private var sharedPreferences: SharedPreferences? = null
 
     fun setup(context: Context) {
-        sharedPreferences = context.getSharedPreferences("CodeRoulette.sharedPrefs", MODE_PRIVATE)
+        sharedPreferences = context.getSharedPreferences("levelup.sharedPrefs", MODE_PRIVATE)
     }
 
     var token: String?
@@ -20,8 +20,12 @@ object AppPreferences {
         get() = Key.EMAIL.getString()
         set(value) = Key.EMAIL.setString(value)
 
+    var password: String?
+        get() = Key.PASS.getString()
+        set(value) = Key.PASS.setString(value)
+
     private enum class Key {
-        TOKEN, EMAIL;
+        TOKEN, EMAIL, PASS;
 
         fun getString(): String? = if (sharedPreferences!!.contains(name)) sharedPreferences!!.getString(name, "") else null
         fun setString(value: String?) = value?.let { sharedPreferences!!.edit { putString(name, value) } } ?: remove()

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/res_id_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="res id"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/res_ex_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="id exo content"
+            android:layout_toEndOf="@id/res_id_item"/>
+
+        <TextView
+            android:id="@+id/res_status_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="status title"
+            android:textColor="@color/black"
+            android:layout_below="@+id/res_ex_item"
+            android:layout_marginEnd="8dp"
+            />
+
+        <TextView
+            android:id="@+id/res_date_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="item date"
+            android:layout_below="@id/res_ex_item"
+            android:layout_toEndOf="@id/res_status_item"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

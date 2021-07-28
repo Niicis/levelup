@@ -1,21 +1,17 @@
 package com.example.levelup.Retrofit.InterfaceAPI
 
+import com.example.levelup.model.Exercise
 import okhttp3.ResponseBody
 import retrofit2.Call
-
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Headers
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ExcerciseService {
     @Headers(
-            "Content-Type: application/json",
-            "No-Authentication: skipInterceptor"
+            "Content-Type: application/json"
     )
-    @GET("excercises/all")
-    fun getExcercises(): Call<ResponseBody>
+    @GET("exercises/all")
+    fun getExcercises(): Call<MutableList<Exercise>>
 
-    @POST("excercises/{id}")
-    fun getOneExcercises(@Body body: Int): Call<ResponseBody>
+    @GET("exercises/{id}")
+    fun getOneExcercises(@Path("id") id: Int): Call<Exercise>
 }

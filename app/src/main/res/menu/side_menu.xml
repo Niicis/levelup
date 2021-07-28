@@ -11,11 +11,6 @@
         android:icon="@drawable/ic_signup"/>
 
     <item
-        android:id="@+id/id_ranking"
-        android:title="@string/id_ranking"
-        android:icon="@drawable/ic_orders"/>
-
-    <item
         android:id="@+id/id_exercises"
         android:title="@string/id_exercises"
         android:icon="@drawable/ic_orders"/>

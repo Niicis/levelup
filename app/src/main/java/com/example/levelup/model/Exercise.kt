@@ -1,7 +1,9 @@
 package com.example.levelup.model
 
+import com.google.gson.annotations.SerializedName
+
 class Exercise(
-    val id: String = "",
-    val content: String = "",
-    val title: String = ""
+    @SerializedName("id") val id: String = "",
+    @SerializedName("content") val content: String = "",
+    @SerializedName("title") val title: String = ""
 )

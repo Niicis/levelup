@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".viewController.Home" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".viewController.OneExercise"/>
         <activity android:name=".viewController.Comments" />
         <activity android:name=".viewController.AllExercises" />
         <activity android:name=".viewController.Account" />
         <activity android:name=".viewController.Exercises" />
-        <activity android:name=".viewController.Rank" />
         <activity android:name=".viewController.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
