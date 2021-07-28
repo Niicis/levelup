@@ -67,6 +67,8 @@ class Comments : AppCompatActivity(), View.OnClickListener {
     private fun initMenu() {
         bottom_navigation.setOnNavigationItemSelectedListener{
             when(it.itemId){
+                R.id.id_icon_home -> goToActivity(Account::class.java)
+                R.id.id_all_exercises -> goToActivity(AllExercises::class.java)
                 R.id.ic_list -> goToActivity(Exercises::class.java)
                 //R.id.ic_map -> goToActivity(Comments::class.java)
             }

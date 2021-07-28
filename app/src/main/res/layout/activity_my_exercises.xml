@@ -41,7 +41,9 @@
             android:id="@+id/editText_resume"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/txt_resume"/>
+            app:layout_constraintTop_toBottomOf="@+id/txt_resume"
+            android:gravity="center"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/txt_answer_title"
@@ -60,6 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="test"
+            android:gravity="center"
             android:scrollbars="vertical"
             app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
             app:layout_constraintTop_toBottomOf="@+id/txt_answer_title" />
