@@ -4,18 +4,15 @@ import retrofit2.Call
 import com.example.levelup.model.User
 import com.example.levelup.model.auth.Login
 import okhttp3.ResponseBody
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.Headers
-import retrofit2.http.Path
+import retrofit2.http.*
 
 
 interface UsersService {
     @Headers(
             "Content-Type: application/json"
     )
-    @GET("users/signin")
-    fun getUser(@Body body: Login): Call<ResponseBody>
+    @POST("users/signin")
+    fun getUser(@Body body: Login): Call<User>
 
     @GET("users/{id}")
     fun getUsersById(@Path("id") id: Int): Call<User>

@@ -68,6 +68,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_first_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/black"
@@ -86,13 +87,14 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/editBirthDays"
+                app:layout_constraintBottom_toTopOf="@+id/sign_up_email_input_container"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_first_name"
                 app:startIconDrawable="@drawable/ic_user"
                 app:startIconTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_last_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/black"
@@ -100,31 +102,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editBirthDays"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/account_birth_day"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_user"
-                app:startIconTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/edit_text_last_name"
-                app:layout_constraintBottom_toTopOf="@+id/sign_up_email_input_container"
-                app:layout_constraintEnd_toEndOf="parent"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black"
-                    android:inputType="date"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/sign_up_email_input_container"
@@ -139,12 +116,13 @@
                 app:hintTextColor="@color/black"
                 app:startIconDrawable="@drawable/ic_email"
                 app:startIconTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/editBirthDays"
-                app:layout_constraintBottom_toTopOf="@+id/editAddress"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_last_name"
+                app:layout_constraintBottom_toTopOf="@+id/username"
                 app:layout_constraintEnd_toEndOf="parent"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_mail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/black" />
@@ -152,100 +130,25 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editAddress"
+                android:id="@+id/username"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/account_address"
+                android:hint="@string/account_email"
                 app:boxStrokeColor="@color/black"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_addresse"
+                app:startIconDrawable="@drawable/ic_email"
                 app:startIconTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/sign_up_email_input_container"
-                app:layout_constraintBottom_toTopOf="@+id/editCity"
-                app:layout_constraintEnd_toEndOf="parent"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editCity"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/account_city"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_addresse"
-                app:startIconTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/editAddress"
-                app:layout_constraintBottom_toTopOf="@+id/editCountry"
-                app:layout_constraintEnd_toEndOf="parent"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editCountry"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/account_country"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_addresse"
-                app:startIconTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/editCity"
-                app:layout_constraintBottom_toBottomOf="@+id/editPostalCode"
-                app:layout_constraintEnd_toEndOf="parent"
-                >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/black" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editPostalCode"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/account_postal_code"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/ic_addresse"
-                app:startIconTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@+id/editCountry"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_last_name"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintVertical_chainStyle="packed"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_username"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/black" />
@@ -255,16 +158,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/btn_validateAccount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/layoutInformation"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="@string/account_validate"
-            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
