@@ -42,10 +42,7 @@ class Comments : AppCompatActivity(), View.OnClickListener {
 
         if (id_res != null) {
             RetrofitInstance.apiComentService.getComment(id_res).enqueue(object : Callback<MutableList<Comment>> {
-                override fun onResponse(
-                    call: Call<MutableList<Comment>>,
-                    response: Response<MutableList<Comment>>
-                ) {
+                override fun onResponse(call: Call<MutableList<Comment>>, response: Response<MutableList<Comment>>) {
                     Log.d("body", response.toString())
                     if (response.isSuccessful) {
                         Log.d("--- Comment ---", response.toString())

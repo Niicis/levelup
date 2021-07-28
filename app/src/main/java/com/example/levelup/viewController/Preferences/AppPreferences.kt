@@ -1,4 +1,4 @@
-package com.example.levelup.Preferences
+package com.example.levelup.viewController.Preferences
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE

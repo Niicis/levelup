@@ -7,6 +7,7 @@ import okhttp3.ResponseBody
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.Path
 
 
 interface UsersService {
@@ -17,6 +18,6 @@ interface UsersService {
     fun getUser(@Body body: Login): Call<ResponseBody>
 
     @GET("users/{id}")
-    fun getUsersById( id: Int): Call<ResponseBody>
+    fun getUsersById(@Path("id") id: Int): Call<User>
 
 }

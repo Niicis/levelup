@@ -55,7 +55,6 @@ class Exercises : AppCompatActivity(), View.OnClickListener {
         toggle_button?.setOnClickListener(this)
         navigationView_exercises?.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.id_icon_user -> goToActivity(Account::class.java)
                // R.id.id_exercises -> goToActivity(Exercises::class.java)
                 R.id.id_all_exercises -> goToActivity(AllExercises::class.java)
                 R.id.id_icon_logOut -> {

@@ -6,16 +6,6 @@
         android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/id_icon_user"
-        android:title="@string/My_account"
-        android:icon="@drawable/ic_signup"/>
-
-    <item
-        android:id="@+id/id_exercises"
-        android:title="@string/id_exercises"
-        android:icon="@drawable/ic_orders"/>
-
-    <item
         android:id="@+id/id_all_exercises"
         android:title="@string/id_all_exercises"
         android:icon="@drawable/ic_orders"/>

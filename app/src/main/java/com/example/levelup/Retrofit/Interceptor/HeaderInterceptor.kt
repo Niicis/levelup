@@ -1,8 +1,7 @@
 package com.example.levelup.Retrofit.Interceptor
 
-import android.annotation.SuppressLint
 import android.util.Log
-import com.example.levelup.Preferences.AppPreferences
+import com.example.levelup.viewController.Preferences.AppPreferences
 import okhttp3.Interceptor
 import okhttp3.Response
 

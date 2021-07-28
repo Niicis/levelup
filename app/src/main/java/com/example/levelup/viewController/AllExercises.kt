@@ -6,21 +6,16 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
 import android.view.View
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.levelup.*
-import com.example.levelup.Preferences.AppPreferences
 import com.example.levelup.Retrofit.RetrofitInstance
 import com.example.levelup.model.Exercise
 import com.example.levelup.viewController.adapter.ExcerciseAdapter
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import kotlinx.android.synthetic.main.activity_all_exercises.*
 import kotlinx.android.synthetic.main.main_toolbar.*
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.io.InputStreamReader
 
 class AllExercises : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,8 +55,7 @@ class AllExercises : AppCompatActivity(), View.OnClickListener {
         toggle_button?.setOnClickListener(this)
         navigationView_all_exercise?.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.id_icon_user -> goToActivity(Account::class.java)
-                R.id.id_exercises -> goToActivity(Exercises::class.java)
+
                 R.id.id_icon_logOut -> {
                     goToActivity(MainActivity::class.java)
                 }

@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.Gravity
 import android.view.View
 import com.example.levelup.*
-import com.example.levelup.Preferences.AppPreferences
+import com.example.levelup.viewController.Preferences.AppPreferences
 import com.example.levelup.Retrofit.RetrofitInstance
 import com.example.levelup.model.auth.Login
 import kotlinx.android.synthetic.main.activity_account.*
@@ -52,7 +52,7 @@ class Account : AppCompatActivity(), View.OnClickListener {
         toggle_button?.setOnClickListener(this)
         navigationView_account?.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.id_exercises -> goToActivity(Exercises::class.java)
+
                 R.id.id_all_exercises -> goToActivity(AllExercises::class.java)
                 R.id.id_icon_logOut -> {
                     goToActivity(MainActivity::class.java)

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.levelup.Preferences.AppPreferences
+import com.example.levelup.viewController.Preferences.AppPreferences
 import com.example.levelup.R
 import com.example.levelup.Retrofit.RetrofitInstance
 import com.example.levelup.model.auth.Login
